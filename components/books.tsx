@@ -29,7 +29,7 @@ export default function Books({}: Props) {
     <div className='relative max-w-full flex overflow-x-scroll overflow-y-hidden  snap-x
     snap-mandatory z-20'>
      {booksData.map((book, index) => (
-      <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+      <div key={index} className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
        
        <motion.img
         initial={{ 
