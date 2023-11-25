@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
@@ -27,10 +26,10 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-6xl scroll-mt-28 text-center sm:mb-40"
+      className="top-56 relative flex flex-col mb-28 max-w-6xl scroll-mt-28 text-center sm:mb-40 h-screen"
     >
-      <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <h2 className="mx-auto mb-4 uppercase text-3xl tracking-[20px] ">Skills</h2>
+      <ul className="flex flex-wrap mt-4 justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
             className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"

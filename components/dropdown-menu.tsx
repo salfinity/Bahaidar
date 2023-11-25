@@ -1,6 +1,6 @@
 "use client";
 
-import { RxDropdownMenu } from 'react-icons/rx';
+import { IoReorderThree } from 'react-icons/io5';
 
 const DropdownMenu = () => {
   return (
@@ -10,7 +10,7 @@ const DropdownMenu = () => {
       items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950 md:hidden"
       style={{animation: 'none'}}   
    >
-      <RxDropdownMenu />
+      <IoReorderThree />
     </button>
   )
 }

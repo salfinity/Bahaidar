@@ -5,6 +5,11 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import householdImg from "@/public/books/household.png";
+import hopeImg from "@/public/books/hope.png";
+import mirrorImg from "@/public/books/mirror.png";
+import deflectionImg from "@/public/books/pointofdeflection2.png";
+import hiddenImg from "@/public/books/hidden-self.png";
 
 export const links = [
   {
@@ -26,6 +31,10 @@ export const links = [
   {
     name: "Experience",
     hash: "#experience",
+  },
+  {
+    name: "Books",
+    hash: "#books",
   },
   {
     name: "Contact",
@@ -62,10 +71,10 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "IQRABIASHARA",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "This marks a revolution in radio broadcasting with IQRA FM—an online radio platform offering news, live streams, and a unique e-commerce section facilitating connections for individuals and businesses.",
+    tags: ["radio livestream", "news", "ecommerce", "ads"],
     imageUrl: corpcommentImg,
   },
   {
@@ -83,6 +92,40 @@ export const projectsData = [
     imageUrl: wordanalyticsImg,
   },
 ] as const;
+
+export const booksData = [
+  {
+    title: "Point of Deflection",
+    description:
+      "'The Point of Deflection' is a book that provides insight into understanding the reasons behind not only changes in behavior but also shifts in perception. For example, when asking a child about their future ambitions, they might enthusiastically mention professions that currently inspire them, like becoming a doctor or pilot. However, it's not uncommon that, a decade or so later, their response to the same question could vary significantly. The book explores the factors influencing such transformations over time.",
+    imageUrl: deflectionImg,
+  },
+  {
+    title: "The Hidden Self",
+    description:
+      "'The Hidden Self' is a profoundly impactful book teeming with potential and hope. It not only taps into the depths of people's emotions but also speaks to their misfortunes with a level of understanding that suggests an intimate knowledge of the lives they have traversed. Through its pages, readers find solace, encouragement, and a beacon of optimism that extends beyond the surface, delving into the intricacies of the human spirit. 'The Hidden Self' is not just a book; it is a source of inspiration that navigates the intricacies of the human experience, offering a profound connection to the hidden aspects of one's soul.",
+    imageUrl: hiddenImg,
+  },
+  {
+    title: "Mirror Reflection",
+    description:
+      "'I've read numerous books, but Dr. Mohamed Bahaidar's literary works stand out. For the first time, I encountered an author delivering information that surpasses the typical book. Each of his two earlier works was not only informative but also avoided regurgitating information.'",
+    imageUrl: mirrorImg,
+  },
+  {
+    title: "Sparkling Hope",
+    description:
+      "In the pages of 'Sparkling Hope,' the profound realization unfolds that life, despite its rugged truths, holds an intrinsic beauty. It serves as a boon for those capable of empathy, imparts wisdom to those open to learning, and extols the endeavors of those who diligently strive.",
+    imageUrl: hopeImg,
+  },
+  {
+    title: "a Household of Bliss",
+    description:
+      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+    imageUrl: householdImg,
+  },
+] as const;
+
 
 export const skillsData = [
   "Leadership",

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
@@ -11,39 +10,44 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-6xl text-center leading-8 sm:mb-40 scroll-mt-28"
+      className="max-w-6xl flex flex-col relative h-screen text-center md:text-left md:flex-row px-8 justify-evenly items-center mb-56 "
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
+     
+      <h2 className="absolute top-4 uppercase text-3xl tracking-[20px]" >About</h2> 
+      <motion.img 
+      initial={{
+        x:-200,
+      }}
+      transition={{
+        duration: 1.2,
+      }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      src="/pic10.jpeg"
+      height={560}
+      width={460}
+      className="-mb-14 mt-6 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[500px]"
+      />
+      
+      <div className="space-y-10 px-0 md:px-10">
+        <h4 className="text-4xl mt-10 font-semibold">Here is a <span className="underline decoration-[#F7AB0A]/50">little</span> background</h4> 
+          <p className="text-sm">
+            A seasoned visionary and catalyst for positive change. 
+          With a Ph.D. in Management, my journey has unfolded over 14 years as the helm of DOCTOR B Consultancy Ltd, 
+          where I transcend conventional business boundaries to address societal challenges globally. As an author of 
+          five impactful books, I delve into psychology, sociology, and life's complexities. A dynamic public speaker, 
+          I have engaged with diverse audiences, offering insights honed through research into over 2,000 books.
 
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I'm also
-        learning how to play the guitar.
-      </p>
+          From counseling roles in Zanzibar to managerial prowess at Iqra FM Kenya, my influence spans continents. Recognized 
+          with the Meena Personal Brand Award in Oman, I am celebrated as a convergent thinker in social and business domains. 
+          Join me on a transformative journey, where strategic management meets compassionate leadership, and together, we explore 
+          new horizons of growth and understanding.
+          </p>
+      </div>
     </motion.section>
   );
 }
