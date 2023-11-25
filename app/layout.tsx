@@ -11,8 +11,8 @@ import DropdownMenu from "@/components/dropdown-menu";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Ricardo | Personal Portfolio",
-  description: "Ricardo is a full-stack developer with 8 years of experience.",
+  title: "Dr. Mohammed Bahaidar | CEO IQRA FM",
+  description: "Author, scholar, enterpreneur and business consultant.",
 };
 
 export default function RootLayout({

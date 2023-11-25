@@ -22,12 +22,12 @@ export default function Books({}: Props) {
   ref={ref}
   id="books" 
   className='h-screen top-56 relative  flex-col text-left md:flex-row w-full justify-center mx-auto items-center mb-28 z-0'>
-    <h2 className="text-center mt-10 uppercase text-3xl tracking-[20px]">
+    <h2 className="text-center mx-auto mt-24 uppercase text-3xl tracking-[20px]">
      Books
     </h2>
-
+   
     <div className='relative max-w-full flex overflow-x-scroll overflow-y-hidden  snap-x
-    snap-mandatory mt-2 z-20'>
+    snap-mandatory z-20'>
      {booksData.map((book, index) => (
       <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
        
@@ -40,11 +40,13 @@ export default function Books({}: Props) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         src={book.imageUrl.src} // Use the imageUrl from the book object
-        alt="" // Use the title as alt text        
+        alt="" // Use the title as alt text
+        width={200}
+        height={200}        
        />
        
 
-       <div className='space-y-6 px-0 md:px-10 max-w-7xl'>
+       <div className='space-y-6 px-0 md:px-6 max-w-7xl'>
         <h4 className='text-2xl font-semibold text-center'>
          <span className='underline decoration-[#F7AB0A]/50'>
           Book {index + 1} of {booksData.length}:
