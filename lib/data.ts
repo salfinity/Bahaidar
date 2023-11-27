@@ -1,7 +1,8 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { LiaBusinessTimeSolid } from "react-icons/lia";
 import { LuGraduationCap } from "react-icons/lu";
+import { GiPocketRadio } from "react-icons/gi";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -45,27 +46,35 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Doctor of Philosophy in Management",
+    location: "University of New Castle (AIMS) Kuala Lumpur – Malaysia",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+      "as i graduated i was serving as a manager at Savoy Real Estate & Gelato Divino in Mombasa from 2012 to 2016.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "2016",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Acting manager",
+    location: "Alshaya (Debenhams) Mall of Qatar (Doha - Qatar) ",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "In charge of cosmetics department.Training & developing staff abilities.Overseeing stocks controller’s workInitiating business growth.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2016 - 2020",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: " Business Proprietor",
+    location: "Dr.Bahaidar Consultancy Ltd Nairobi – Kenya.",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
+      "We provide case studies and practical solutions to assist sole proprietors and enterprises streamline operations and achieve thresholds of success.",
+    icon: React.createElement(LiaBusinessTimeSolid),
+    date: "2021 - present",
+  },
+  {
+    title: " Chief Executive Officer",
+    location: "IQRA FM, Nairobi – Kenya.",
+    description:
+      "Creation of enticing marketing strategies, clearing debts, and resolving management issues at IQRA FM as the CEO.",
+    icon: React.createElement(GiPocketRadio),
     date: "2021 - present",
   },
 ] as const;
