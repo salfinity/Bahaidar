@@ -8,7 +8,7 @@ import wordanalyticsImg from "@/public/wordanalytics.png";
 import householdImg from "@/public/books/household.png";
 import hopeImg from "@/public/books/hope.png";
 import mirrorImg from "@/public/books/mirror.png";
-import deflectionImg from "@/public/books/pointofdeflection2.png";
+import deflectionImg from "@/public/books/pointofdeflection.png";
 import hiddenImg from "@/public/books/hidden-self.png";
 
 export const links = [

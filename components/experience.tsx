@@ -15,8 +15,8 @@ export default function Experience() {
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="top-56 relative flex flex-col mb-28 max-w-6xl scroll-mt-28 text-center sm:mb-40 h-screen">
-      <h2 className="top-0 uppercase text-3xl tracking-[20px]">experience</h2>
+    <section id="experience" ref={ref} className="top-56 relative flex flex-col mb-64 max-w-6xl scroll-mt-28 text-center sm:mb-40 h-screen">
+      <h2 className="top-54 uppercase text-3xl tracking-[14px]">experience</h2>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>

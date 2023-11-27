@@ -10,7 +10,7 @@ export default function Projects() {
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 max-w-7xl flex flex-col top-56 mb-64 relative h-screen mx-auto justify-center items-center cursor-pointer">
-      <h2 className="mb-4 uppercase text-3xl tracking-[20px] ">Projects</h2>
+      <h2 className="mb-4 uppercase text-3xl tracking-[14px] ">Expeditions</h2>
       <div>
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
