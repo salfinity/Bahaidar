@@ -129,31 +129,31 @@ export const booksData = [
   {
     title: "Millionaire’s Quest",
     description:
-      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+      "Becoming a millionaire involves understanding the essence of success and business. Is it tied to a person or a structured entity? Exploring the idea that a company is an extension of oneself, the question arises: What happens to it after you're gone? Alternatively, if we view a business as a structure, can changing its location alter its core concept? Ultimately, these considerations underscore the transformative power of a single idea—potentially the key to achieving millionaire status.",
     imageUrl: unpublishedImg,
   },
   {
     title: "The Anonymous Trek",
     description:
-      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+      "Navigating the unknown is a compelling journey—one of self-discovery amid confusion and emotional turmoil. Understanding our current position, we must assimilate into our surroundings and overcome internal conflicts to address external challenges. However, the path to serenity remains elusive, leaving us in a perpetual state of confusion. Amid the struggle to rise from the crowded bottom, the troubling question lingers: How long until we truly know ourselves and our purpose, especially by age 40?",
     imageUrl: unpublishedImg,
   },
   {
     title: "My Dash of Existence",
     description:
-      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+      "Life, fraught with challenges, lacks clear escape routes. Despite their complexity, problems fuel our existence, prompting solutions and imbuing life with meaning. While some offer solutions, others easily succumb to afflictions. The question persists: Why do people give up so easily? Regardless of wealth or status, everyone faces the twists of existence. Exhaustion may lead to surrender. Understanding roots, prioritizing, and breaking free from abuse is crucial. Life's struggles are real, but resilience lies in holding on, developing problem-solving skills, and fostering optimism—a vessel that guides us through life's stormy waters.",
     imageUrl: unpublishedImg,
   },
   {
     title: "The Living Silhouette",
     description:
-      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+      "A young orphan, once a shepherd struggling in a hostile environment, faced rejection from his nuclear family and community. Humiliated, he fled amid public pressure and propaganda. In response, he and his supporters endured a three-year boycott, suffering hunger and illness. Seeking peace, he traveled to escape ideological constraints. His rejection by his own people shattered his noble reputation and familial trust, once upheld by a strong guardian. The loss marked a turning point in his life.",
     imageUrl: unpublishedImg,
   },
   {
     title: "Trailing the Scent of Sex",
     description:
-      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+      "Encountering an enchanting woman, I, a 19-year-old virgin, experienced a surreal moment. Her unique beauty and spicy scent left me in awe. As things escalated, my feverish emotions ignited. The encounter unfolded into an intimate experience, marked by exploration and ecstasy. Overwhelmed, I succumbed to unconsciousness, a heady mix akin to opium.",
     imageUrl: unpublishedImg,
   },
 
