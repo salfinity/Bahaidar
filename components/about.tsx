@@ -8,6 +8,8 @@ export default function About() {
   const { ref } = useSectionInView("About");
 
   return (
+    <>
+    <h2 className="uppercase text-3xl tracking-[20px] text-center mx-auto mb-16" >About</h2> 
     <motion.section
       ref={ref}
       className="max-w-6xl flex flex-col relative h-screen text-center md:text-left md:flex-row px-8 justify-evenly items-center mb-56 "
@@ -17,7 +19,7 @@ export default function About() {
       id="about"
     >
      
-      <h2 className="absolute top-0 uppercase text-3xl tracking-[20px] text-center mx-auto" >About</h2> 
+      
       <motion.img 
       initial={{
         x:-200,
@@ -30,7 +32,7 @@ export default function About() {
       src="/pic10.jpeg"
       height={560}
       width={460}
-      className="-mb-14 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[500px]"
+      className="mb-18 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[500px]"
       />
       
       <div className="space-y-10 px-0 md:px-10">
@@ -49,5 +51,6 @@ export default function About() {
           </p>
       </div>
     </motion.section>
+    </>
   );
 }
