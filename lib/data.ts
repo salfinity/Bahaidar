@@ -10,6 +10,7 @@ import hopeImg from "@/public/books/hope.png";
 import mirrorImg from "@/public/books/mirror.png";
 import deflectionImg from "@/public/books/pointofdeflection.png";
 import hiddenImg from "@/public/books/hidden-self.png";
+import unpublishedImg from "@/public/books/unpublished.jpeg";
 
 export const links = [
   {
@@ -91,6 +92,7 @@ export const projectsData = [
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
     imageUrl: wordanalyticsImg,
   },
+  
 ] as const;
 
 export const booksData = [
@@ -124,6 +126,38 @@ export const booksData = [
       "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
     imageUrl: householdImg,
   },
+  {
+    title: "Millionaire’s Quest",
+    description:
+      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+    imageUrl: unpublishedImg,
+  },
+  {
+    title: "The Anonymous Trek",
+    description:
+      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+    imageUrl: unpublishedImg,
+  },
+  {
+    title: "My Dash of Existence",
+    description:
+      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+    imageUrl: unpublishedImg,
+  },
+  {
+    title: "The Living Silhouette",
+    description:
+      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+    imageUrl: unpublishedImg,
+  },
+  {
+    title: "Trailing the Scent of Sex",
+    description:
+      "'House of Bliss' is a book that tackles the profound challenges of our time — a world filled with misconceptions, seeking lasting solutions beyond quick fixes. In a society where homes are falling apart, the book addresses the need to transform houses into true sanctuaries. It explores the intricate dynamics of relationships, emphasizing the importance of understanding and satisfying one's spouse. 'A Household of Bliss' doesn't just offer solutions to immediate troubles but aims to restore the entire atmosphere, fostering bliss in our existence. It serves as a guide for those desperate to mend broken homes and individuals seeking lasting fulfillment.",
+    imageUrl: unpublishedImg,
+  },
+
+  
 ] as const;
 
 
