@@ -17,7 +17,7 @@ export default function About() {
       id="about"
     >
      
-      <h2 className="absolute top-24 uppercase text-3xl tracking-[20px]" >About</h2> 
+      <h2 className="absolute top-0 uppercase text-3xl tracking-[20px] text-center mx-auto" >About</h2> 
       <motion.img 
       initial={{
         x:-200,
@@ -30,7 +30,7 @@ export default function About() {
       src="/pic10.jpeg"
       height={560}
       width={460}
-      className="-mb-14 mt-6 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[500px]"
+      className="-mb-14 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[500px]"
       />
       
       <div className="space-y-10 px-0 md:px-10">
