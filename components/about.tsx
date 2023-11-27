@@ -17,7 +17,7 @@ export default function About() {
       id="about"
     >
      
-      <h2 className="absolute top-4 uppercase text-3xl tracking-[20px]" >About</h2> 
+      <h2 className="absolute top-24 uppercase text-3xl tracking-[20px]" >About</h2> 
       <motion.img 
       initial={{
         x:-200,
