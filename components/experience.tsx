@@ -15,7 +15,7 @@ export default function Experience() {
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="top-56 relative flex flex-col mb-64 max-w-6xl scroll-mt-28 text-center sm:mb-40 h-screen">
+    <section id="experience" ref={ref} className="flex flex-col max-w-6xl scroll-mt-28 text-center sm:mb-16">
       <h2 className="top-54 uppercase text-3xl tracking-[14px]">experience</h2>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (

@@ -57,7 +57,7 @@ export const experiencesData = [
     title: "Acting manager",
     location: "Alshaya (Debenhams) Mall of Qatar (Doha - Qatar) ",
     description:
-      "In charge of cosmetics department.Training & developing staff abilities.Overseeing stocks controller’s workInitiating business growth.",
+      "In charge of cosmetics department.Training & developing staff abilities.Overseeing stocks controller’s work and Initiating business growth.",
     icon: React.createElement(CgWorkAlt),
     date: "2016 - 2020",
   },

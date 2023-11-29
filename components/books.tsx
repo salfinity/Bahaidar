@@ -15,19 +15,15 @@ export default function Books({}: Props) {
 
  
  return (
-  <>
-  <h2 className="text-center mx-auto mt-56 uppercase text-3xl tracking-[20px]">
-     Books
-    </h2>
-   
-  <motion.div
+  
+   <motion.div
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   transition={{ duration: 1.5 }} 
   ref={ref}
   id="books" 
-  className='h-screen top-4 relative  flex-col text-left md:flex-row w-full justify-center mx-auto items-center mb-56 z-0'>
-    
+  className='flex-col text-left md:flex-row w-full justify-center mx-auto items-center mb-28 md:mb-56 z-0'>
+  <h2 className="text-center mx-auto uppercase text-3xl tracking-[20px] mb-10">Books</h2>    
     <div className='relative max-w-full flex overflow-x-scroll  overflow-y-hidden  snap-x
     snap-mandatory z-20'>
      {booksData.map((book, index) => (
@@ -65,7 +61,6 @@ export default function Books({}: Props) {
    
     <div className='w-full absolute top-[30%] bg-[#ff0000]/10 left-0 h-[500px] -skew-y-12' />
   </motion.div>
-  </>
 )
 }
 
