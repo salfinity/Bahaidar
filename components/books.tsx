@@ -23,7 +23,7 @@ export default function Books({}: Props) {
             <h2 className="mt-28 uppercase text-3xl tracking-[14px]">Books</h2>
 
             <div
-                className="max-w-full flex overflow-x-scroll py-8 overflow-y-hidden  snap-x
+                className="max-w-full flex overflow-x-scroll py-4 overflow-y-hidden  snap-x
     snap-mandatory"
             >
                 {booksData.map((book, index) => (

@@ -9,12 +9,12 @@ export default function About() {
 
     return (
         <>
-            <h2 className="uppercase text-3xl tracking-[20px] text-center mx-auto mt-28">
+            <h2 className="uppercase text-3xl tracking-[20px] text-center mx-auto">
                 About
             </h2>
             <motion.section
                 ref={ref}
-                className="max-w-6xl flex flex-col relative h-screen text-center md:text-left md:flex-row px-8 justify-evenly items-center mb-28 "
+                className="max-w-6xl flex flex-col relative h-screen text-center md:text-left md:flex-row px-8 justify-evenly items-center mt-8 mb-28 "
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.175 }}
