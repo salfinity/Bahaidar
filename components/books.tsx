@@ -12,7 +12,63 @@ export default function Books({}: Props) {
     const books = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     return (
-        <motion.div
+        <>
+            <h2 className="uppercase text-3xl tracking-[20px] text-center mx-auto">
+                Books
+            </h2>
+            <motion.div
+                ref={ref}
+                className="w-full flex flex-col relative h-screen text-center md:text-left md:flex-row px-8 justify-evenly items-center mt-8 mb-28 "
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.175 }}
+                id="books"
+            >
+                <div className="max-w-full flex overflow-x-scroll py-4 overflow-y-hidden  snap-x snap-mandatory">
+                    {booksData.map((book, index) => (
+                        <div
+                            key={index}
+                            className="w-screen flex-shrink-0 snap-center flex items-center justify-center p-20 md:p-44 h-screen"
+                        >
+                            <motion.img
+                                initial={{
+                                    opacity: 0,
+                                    y: -200
+                                }}
+                                transition={{ duration: 1.2 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                src={book.imageUrl.src} // Use the imageUrl from the book object
+                                alt="" // Use the title as alt text
+                                width={200}
+                                height={200}
+                                className="mb-22 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[500px] hidden md:flex"
+                            />
+
+                            <div className="space-y-6 px-0 md:px-6 max-w-8xl">
+                                <h4 className="text-xl md:text-2xl font-semibold text-center">
+                                    <span className="underline decoration-[#F7AB0A]/50">
+                                        Book {index + 1} of {booksData.length}:
+                                    </span>{' '}
+                                    {book.title}
+                                </h4>
+
+                                <p className="text-sm text-center md:text-left">
+                                    {book.description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="hidden w-full absolute top-[30%] bg-[#ff0000]/10 left-0 h-[500px] -skew-y-12" />
+            </motion.div>
+        </>
+    );
+}
+
+{
+    /*  <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1.5 }}
@@ -64,4 +120,6 @@ export default function Books({}: Props) {
             <div className="hidden w-full absolute top-[30%] bg-[#ff0000]/10 left-0 h-[500px] -skew-y-12" />
         </motion.div>
     );
+}
+*/
 }
