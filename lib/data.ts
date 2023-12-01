@@ -5,7 +5,7 @@ import { LuGraduationCap } from 'react-icons/lu';
 import { GiPocketRadio } from 'react-icons/gi';
 import corpcommentImg from '@/public/corpcomment.png';
 import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
+import wordanalyticsImg from '@/public/wordanalytics.jpeg';
 import householdImg from '@/public/books/household.png';
 import hopeImg from '@/public/books/hope.png';
 import mirrorImg from '@/public/books/mirror.png';
@@ -88,10 +88,10 @@ export const projectsData = [
         imageUrl: corpcommentImg
     },
     {
-        title: 'Word Analytics',
+        title: 'Researcher',
         description:
-            'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-        tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+            ' I have covered over 2000 books that deal with Philosophy and psychology of life.I have also resolved over 10000 cases of family and relationship conflicts.',
+        tags: ['BBC on social issues'],
         imageUrl: wordanalyticsImg
     },
     {
