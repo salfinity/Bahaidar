@@ -24,11 +24,11 @@ export default function Books({}: Props) {
                 transition={{ delay: 0.175 }}
                 id="books"
             >
-                <div className="max-w-full flex overflow-x-scroll py-4 overflow-y-hidden  snap-x snap-mandatory">
+                <div className="max-w-full flex overflow-x-scroll py-4 overflow-y-scroll md:overflow-y-hidden  snap-x snap-mandatory">
                     {booksData.map((book, index) => (
                         <div
                             key={index}
-                            className="w-screen flex-shrink-0 snap-center flex items-center justify-center p-20 md:p-44 h-screen"
+                            className="w-screen flex-shrink-0 snap-center flex flex-col md:flex-row items-center justify-center p-4 md:p-44 h-screen"
                         >
                             <motion.img
                                 initial={{
@@ -42,7 +42,7 @@ export default function Books({}: Props) {
                                 alt="" // Use the title as alt text
                                 width={200}
                                 height={200}
-                                className="mb-22 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg xl:w-[400px] xl:h-[500px] hidden md:flex"
+                                className="mb-22 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-md object-cover md:rounded-lg xl:w-[400px] xl:h-[500px]  md:flex"
                             />
 
                             <div className="space-y-6 px-0 md:px-6 max-w-8xl">
@@ -53,7 +53,10 @@ export default function Books({}: Props) {
                                     {book.title}
                                 </h4>
 
-                                <p className="text-sm text-center md:text-left">
+                                <p
+                                    className="text-sm text-center  md:text-left"
+                                    style={{ maxHeight: 'none' }}
+                                >
                                     {book.description}
                                 </p>
                             </div>
