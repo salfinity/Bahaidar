@@ -9,7 +9,6 @@ type Props = {};
 
 export default function Books({}: Props) {
     const { ref } = useSectionInView('Books');
-    const books = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
     return (
         <>
@@ -38,20 +37,22 @@ export default function Books({}: Props) {
                                 transition={{ duration: 1.2 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                src={book.imageUrl.src} // Use the imageUrl from the book object
+                                src={book.imageUrl} // Use the imageUrl from the book object
                                 alt="" // Use the title as alt text
                                 width={200}
                                 height={200}
-                                className="mb-22 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-md object-cover md:rounded-lg xl:w-[400px] xl:h-[500px]  md:flex"
+                                className="mb-22 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-md object-cover md:rounded-lg xl:w-[400px] xl:h-[500px] hidden md:flex"
                             />
-
                             <div className="space-y-6 px-0 md:px-6 max-w-8xl">
-                                <h4 className="text-xl md:text-2xl font-semibold text-center">
-                                    <span className="underline decoration-[#F7AB0A]/50">
-                                        Book {index + 1} of {booksData.length}:
-                                    </span>{' '}
-                                    {book.title}
-                                </h4>
+                                <div className="ml-12 items-center justify-center">
+                                    <img
+                                        src={book.titleImageUrl} // Use the imageUrl from the book object
+                                        alt="" // Use the title as alt text
+                                        width={45}
+                                        height={30}
+                                        className="mb-8 mt-24 md:mb-0 flex-shrink-0 w-full h-1/2  object-cover "
+                                    />
+                                </div>
 
                                 <p
                                     className="text-sm text-center  md:text-left"
