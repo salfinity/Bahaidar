@@ -22,6 +22,7 @@ import householdArt from '@/public/books/nameart/household.png';
 import dashArt from '@/public/books/nameart/dash.png';
 import anonimousArt from '@/public/books/nameart/trek.png';
 import sexArt from '@/public/books/nameart/sex.png';
+import livingArt from '@/public/books/nameart/living.png';
 
 export const links = [
     {
@@ -176,7 +177,7 @@ export const booksData: Book[] = [
         imageUrl: unpublishedImg.src
     },
     {
-        titleImageUrl: deflectionArt.src, //'The Living Silhouette',
+        titleImageUrl: livingArt.src, //'The Living Silhouette',
         description:
             'For a young orphan who grew up as a shepherd to make ends meet, the situation was dire. He was humiliated as he grew up and his own nuclear family members shunned him. This forced him to flee a home strained by the fact that he is no longer accepted by his community, with increased public pressure, name-calling and deceptive propaganda hurled at him. He was forced to flee, incensed and agitated by his own people’s disdain for him. He participated in a three-year boycott with his supporters. Subsequently, they suffered from severe hunger to the point of eating grass as well as illness due to a lack of food, medicine and trade. Due to the intense nature of the situation, he sought a way out and decided to travel to a nearby location to find peace of mind. Everything happened because he saw things differently. He lived in a community that preferred to follow in the footsteps of its forefathers. Any individual who contradicts their ideology is punished. In our homes, we are supposed to feel a sense of belonging. In this case, he is overwhelmed by the fact that his own people reject him. This tainted his reputation as a member of a noble family, respected by the community, and entrusted with the tribe’s wealth. Everything was lost after his guardian died; he was an uncle and a strong leader who had his back. He is no longer with him and the tables have turned.',
         imageUrl: unpublishedImg.src
