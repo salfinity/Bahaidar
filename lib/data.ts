@@ -21,6 +21,7 @@ import hopeArt from '@/public/books/nameart/hope.png';
 import householdArt from '@/public/books/nameart/household.png';
 import dashArt from '@/public/books/nameart/dash.png';
 import anonimousArt from '@/public/books/nameart/trek.png';
+import sexArt from '@/public/books/nameart/sex.png';
 
 export const links = [
     {
@@ -157,7 +158,7 @@ export const booksData: Book[] = [
         imageUrl: wealthImg.src
     },
     {
-        titleImageUrl: deflectionArt.src, //'Trailing the Scent of Sex',
+        titleImageUrl: sexArt.src, //'Trailing the Scent of Sex',
         description:
             'As I entered the room, I was greeted by a beautiful, hypnotic woman. She had a unique physique, much like a model. I was a young man with no experience, a 19-year-old virgin with coyness in my bones. Her stunning appearance astounded me. ‘Was this a dream?’ I was taken aback in a place I wasn’t familiar with. In shock, my mouth hung open wide. A well-lit brown skin tone with a spicy scent trail. Is she perfumed with cloves? An awkward question to ask in chemistry. My temperature rose as I felt heat rising within me. My fever was caused by flammable emotions rising to the surface. She drew in closer and stripped me bare of romance. As I fell onto the bed and landed on my Achilles’ heel, I lost my strength. The woman in her early forties is kissing me and leaning on me in a cowgirl pose, making me want to delve deeper into our passionate relationship. My inquisitive hands were everywhere. I finally made it to her fat-lipped extra labia vagina. What I saw was a protruding pussy that appeared to be about to blossom. I was stunned and wondered why it was this way. Is it due to her level of expertise? “Who am I to know?” I asked myself inquisitively. As she slowly digs it up on my penis, I squeal with delight. Oh my gosh! She was skilled at this skill. She made an upward and downward motion. She placed her extra labia on the tip of my dick, which drove me insane with delight. I was covered in goosebumps and didn’t know what to do. My hands were all over the place, and I was holding her tightly, unsure of what I should and shouldn’t touch, leaving me perplexed and befuddled. It felt like I was high on opium in my head, which was an odd and intense sensation. Perplexed, I dined in ecstasy to the point of ejaculation. An instant release caused my unconsciousness.',
         imageUrl: sexImg.src
