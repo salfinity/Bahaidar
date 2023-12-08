@@ -23,6 +23,7 @@ import dashArt from '@/public/books/nameart/dash.png';
 import anonimousArt from '@/public/books/nameart/trek.png';
 import sexArt from '@/public/books/nameart/sex.png';
 import livingArt from '@/public/books/nameart/living.png';
+import wealthArt from '@/public/books/nameart/wealth.png';
 
 export const links = [
     {
@@ -153,7 +154,7 @@ export const booksData: Book[] = [
         imageUrl: householdImg.src
     },
     {
-        titleImageUrl: deflectionArt.src, //'Millionaire’s Quest',
+        titleImageUrl: wealthArt.src, //'Millionaire’s Quest',
         description:
             'Who is a millionaire and how do you become one? For those who are interested, let us explore this fascinating quest. Is it the success of their businesses that allows them to keep their massive wealth as a security of their status, and if so, what exactly is a business? Is it sufficient for us to find a corporation or is there more to it? What distinguishes your company? Is it you as a person or a structure that you started with? For example, consider the philosophy: A company is you as a person and that makes all the difference. What happens after you die? Does the company die with you? What if we reject the notion of a business being a person and instead refer to it as a structure? Would that be correct? Furthermore, what happens if we move that transaction somewhere else? Will that change the fundamental concept of your company? To summarize, all of these falls under one umbrella which is an idea. It only takes one thought to make all the difference. Just a thought, which some may regard as a dream can propel you to success. Will I be correct in saying that it only took one inspiration for Martin Cooper to invent a mobile phone; one inspiring idea for the Wright brothers to have their first successful airplane in 1903; or the ingenuity of George Soros to make $1 billion in a single day? And am I correct in saying you’re only one idea away from becoming a millionaire?.',
         imageUrl: wealthImg.src

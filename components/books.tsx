@@ -23,7 +23,7 @@ export default function Books({}: Props) {
                 transition={{ delay: 0.175 }}
                 id="books"
             >
-                <div className="max-w-full flex overflow-x-scroll py-4 overflow-y-scroll md:overflow-y-hidden  snap-x snap-mandatory">
+                <div className="max-w-full flex overflow-x-scroll py-4 overflow-y-scroll md:overflow-y-scroll  snap-x snap-mandatory">
                     {booksData.map((book, index) => (
                         <div
                             key={index}
@@ -41,7 +41,7 @@ export default function Books({}: Props) {
                                 alt="" // Use the title as alt text
                                 width={200}
                                 height={200}
-                                className="mb-22 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-md object-cover md:rounded-lg xl:w-[400px] xl:h-[500px] hidden md:flex"
+                                className="mb-22 mt-8 md:mb-0 flex-shrink-0 w-36 h-36 rounded-md object-cover md:rounded-lg xl:w-[300px] xl:h-[400px] hidden md:flex"
                             />
                             <div className="space-y-6 px-0 md:px-6 max-w-8xl">
                                 <div className="ml-12 items-center justify-center">
@@ -50,13 +50,13 @@ export default function Books({}: Props) {
                                         alt="" // Use the title as alt text
                                         width={45}
                                         height={30}
-                                        className="mb-8 mt-24 md:mb-0 flex-shrink-0 w-full h-1/2  object-cover "
+                                        className="mb-8 mt-24 md:mb-0 flex-shrink-0 w-full h-1/4  object-cover "
                                     />
                                 </div>
 
                                 <p
-                                    className="text-sm text-center  md:text-left"
-                                    style={{ maxHeight: 'none' }}
+                                    className="text-sm text-center grow h-3/4 md:text-left"
+                                    style={{ maxHeight: '500px' }}
                                 >
                                     {book.description}
                                 </p>

@@ -3,9 +3,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
+import { useTypewriter } from 'react-simple-typewriter';
 
 export default function About() {
     const { ref } = useSectionInView('About');
+    const [text, count] = useTypewriter({
+        words: ['Maestro of Multifaceted Mastery'],
+        loop: true,
+        delaySpeed: 2000
+    });
 
     return (
         <>
