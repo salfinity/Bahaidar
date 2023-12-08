@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import { useTypewriter } from 'react-simple-typewriter';
+import { AiFillProfile } from 'react-icons/ai';
 
 export default function About() {
     const { ref } = useSectionInView('About');
@@ -67,6 +68,15 @@ export default function About() {
                         management meets compassionate leadership, and together,
                         we explore new horizons of growth and understanding.
                     </p>
+                    <button
+                        className=" bg-white px-3 gap-2  h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] 
+                        border border-white border-opacity-40 shadow-slate-900 dark:shadow-slate-800 
+                        shadow-lg rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 
+                        transition-all dark:bg-gray-950"
+                        style={{ animation: 'none' }}
+                    >
+                        <AiFillProfile size={30} /> Know me Better
+                    </button>
                 </div>
             </motion.section>
         </>

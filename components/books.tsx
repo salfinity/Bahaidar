@@ -50,7 +50,7 @@ export default function Books({}: Props) {
                                         alt="" // Use the title as alt text
                                         width={45}
                                         height={30}
-                                        className="mb-8 mt-24 md:mb-0 flex-shrink-0 w-full h-1/4  object-cover "
+                                        className="mb-8 mt-0 md:mb-0 pt-24 flex-shrink-0 w-full h-full  object-cover "
                                     />
                                 </div>
 

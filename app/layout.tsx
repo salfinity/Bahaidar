@@ -8,6 +8,7 @@ import ThemeContextProvider from '@/context/theme-context';
 import { Toaster } from 'react-hot-toast';
 import DropdownMenu from '@/components/dropdown-menu';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import ArticleButton from '@/components/ArticleButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({
                         <Toaster position="top-right" />
                         <ThemeSwitch />
                         <DropdownMenu />
+                        <ArticleButton />
                     </ActiveSectionContextProvider>
                 </ThemeContextProvider>
             </body>
