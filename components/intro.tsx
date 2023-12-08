@@ -86,8 +86,14 @@ export default function Intro() {
                 animate={{ opacity: 1, y: 0 }}
             >
                 <span className="underline-none">
-                    <a href="https://iqrafm.com">CEO IQRAFM</a>| AUTHOR &
-                    SCHOLAR | BUSINESS CONSULTANT | PUBLIC SPEAKER
+                    <a
+                        href="https://iqrafm.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        CEO IQRAFM
+                    </a>
+                    | AUTHOR & SCHOLAR | BUSINESS CONSULTANT | PUBLIC SPEAKER
                 </span>
                 <Cursor cursorColor="#000000" />
             </motion.h3>
