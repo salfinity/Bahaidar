@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import { useTypewriter } from 'react-simple-typewriter';
 import { AiFillProfile } from 'react-icons/ai';
+import { useRouter } from 'next/navigation';
 
 export default function About() {
     const { ref } = useSectionInView('About');
@@ -13,6 +14,11 @@ export default function About() {
         loop: true,
         delaySpeed: 2000
     });
+    const router = useRouter();
+
+    const handleMoreClick = () => {
+        router.push('/MoreAbout');
+    };
 
     return (
         <>
@@ -74,6 +80,7 @@ export default function About() {
                         shadow-lg rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 
                         transition-all dark:bg-gray-950"
                         style={{ animation: 'none' }}
+                        onClick={handleMoreClick}
                     >
                         <AiFillProfile size={30} /> Know me Better
                     </button>
