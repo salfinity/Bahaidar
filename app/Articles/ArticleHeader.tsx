@@ -4,7 +4,7 @@ import Link from 'next/link';
 import TwitterXImg from '/public/twitter.png';
 import { FaInstagramSquare, FaTiktok, FaYoutube } from 'react-icons/fa';
 
-const Header = () => {
+const ArticleHeader = () => {
     return (
         <header className="w-full fixed top-6 p-4 px-10 flex items-center justify-between ">
             <Logo />
@@ -12,13 +12,13 @@ const Header = () => {
                 className="w-max py-3 px-8 border border-solid border-black rounded-full font-medium text-capitalize flex items-center gap-4
              fixed right-1/2 translate-x-1/2 bg-slate-200/80 backdrop-blur-sm"
             >
-                <Link href="/Articles" className="text-black dark:text-white">
+                <Link href="/All" className="text-black dark:text-white">
                     All
                 </Link>
                 <Link href="/Featured" className="text-black dark:text-white">
                     Featured
                 </Link>
-                <Link href="/Speeches" className="text-black dark:text-white">
+                <Link href="/Categories" className="text-black dark:text-white">
                     Categories
                 </Link>
             </nav>
@@ -49,4 +49,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default ArticleHeader;
