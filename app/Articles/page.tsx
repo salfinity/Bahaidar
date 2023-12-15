@@ -1,40 +1,37 @@
-import Layout from '@/components/Layout';
+import Link from 'next/link';
 import React from 'react';
-import Image from 'next/image';
-import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { FaPenAlt, FaQuoteLeft } from 'react-icons/fa';
+import { LiaFileVideoSolid } from 'react-icons/lia';
 
-function page() {
+const page = () => {
     return (
-        <div className="flex items-center text-black  w-full min-h-screen mt-0">
-            <Layout className="pt-0">
-                <div className="flex items-center justify-between w-full">
-                    <div className="w-1/2 p-16">
-                        <Image
-                            src={'/avatar.png'}
-                            alt="Bahaidar"
-                            className="w-full h-auto"
-                            width={450}
-                            height={450}
-                        />
-                    </div>
-                    <div className="w-1/2 p-16">
-                        <h1 className="text-6xl font-bold text-left justify-center py-4">
-                            QUOTE OF THE DAY
-                        </h1>
-                        <p className=" text-base font-medium py-4">
-                            <FaQuoteLeft />
-                            The best lessons are learned with a hungry stomach,
-                            an empty wallet, and a broken heart; at this point,
-                            you will understand the genuineness of your true
-                            friends as well as who is with you and who is
-                            against you.
-                            <FaQuoteRight />
-                        </p>
-                    </div>
-                </div>
-            </Layout>
+        <div className="justify-center flex flex-col gap-4 items-center text-center min-h-screen mx-auto  bg-[url('/animations/8.jpg')] bg-cover bg-center">
+            <div
+                className="text-3xl font-semibold bg-white  px-6 py-2 gap-4 text-slate-950 dark:text-slate-100  h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] 
+      border border-white border-opacity-40 shadow-slate-900 dark:shadow-slate-800 shadow-lg rounded-full flex 
+      items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+            >
+                <Link href="/Articles/quotes">Quotes</Link>{' '}
+                <FaQuoteLeft size={30} />
+            </div>
+            <div
+                className="text-3xl font-semibold bg-white px-6 py-2 gap-4 text-slate-950 dark:text-slate-100  h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] 
+      border border-white border-opacity-40 shadow-slate-900 dark:shadow-slate-800 shadow-lg rounded-full flex 
+      items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+            >
+                <Link href="/Articles/articles">Articles</Link>
+                <FaPenAlt size={30} />
+            </div>
+            <div
+                className="text-3xl font-semibold bg-white px-6 py-2 gap-4 text-slate-950 dark:text-slate-100  h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] 
+      border border-white border-opacity-40 shadow-slate-900 dark:shadow-slate-800 shadow-lg rounded-full flex 
+      items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+            >
+                <Link href="/Articles/videos">Videos</Link>
+                <LiaFileVideoSolid size={30} />
+            </div>
         </div>
     );
-}
+};
 
 export default page;

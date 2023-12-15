@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '@/components/ui/Logo';
-import { Link } from '@react-email/components';
+import Link from 'next/link';
+import TwitterXImg from '/public/twitter.png';
+import { FaInstagramSquare, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const Header = () => {
     return (
@@ -11,16 +13,38 @@ const Header = () => {
              fixed right-1/2 translate-x-1/2 bg-slate-200/80 backdrop-blur-sm"
             >
                 <Link href="/Articles" className="text-black dark:text-white">
-                    Quotes
+                    All
                 </Link>
                 <Link href="/Featured" className="text-black dark:text-white">
                     Featured
                 </Link>
                 <Link href="/Speeches" className="text-black dark:text-white">
-                    Videos
+                    Categories
                 </Link>
             </nav>
-            <div>Socials</div>
+            <nav className="flex items-center gap-4 cursor-pointer">
+                <Link href="https://twitter.com/dr_m_bahaidar/" target="_blank">
+                    <img src={TwitterXImg.src} className="w-8 h-8" />
+                </Link>
+                <Link
+                    href="https://www.tiktok.com/@doctor_bahaidar"
+                    target="_blank"
+                >
+                    <FaTiktok size={30} />
+                </Link>
+                <Link
+                    href="https://www.youtube.com/@doctorbahaidar262"
+                    target="_blank"
+                >
+                    <FaYoutube size={30} />
+                </Link>
+                <Link
+                    href="https://www.instagram.com/doctorbahaidar/"
+                    target="_blank"
+                >
+                    <FaInstagramSquare size={30} />
+                </Link>
+            </nav>
         </header>
     );
 };
