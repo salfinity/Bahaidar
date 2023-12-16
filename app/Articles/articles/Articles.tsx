@@ -1,9 +1,15 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue } from 'framer-motion';
+
+interface MovingImgProps {
+    title: string;
+    img: string;
+    link: string;
+}
 
 interface AllArticleProps {
     img: string;
@@ -22,20 +28,51 @@ interface FeaturedArticleProps {
 
 const FramerImage = motion(Image);
 
-const AllArticles: React.FC<AllArticleProps> = ({ img, title, date, link }) => {
+const MovingImg: React.FC<MovingImgProps> = ({ title, img, link }) => {
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+    const imgRef = useRef<HTMLImageElement | null>(null);
+
+    function handleMouse(event: React.MouseEvent<HTMLAnchorElement>) {
+        if (imgRef.current) {
+            imgRef.current.style.display = 'inline-block';
+            x.set(event.pageX);
+            y.set(-5);
+        }
+    }
+
+    function handleMouseLeave(event: React.MouseEvent<HTMLAnchorElement>) {
+        if (imgRef.current) {
+            imgRef.current.style.display = 'none';
+            x.set(0);
+            y.set(0);
+        }
+    }
     return (
-        <li
-            className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center
-        justify-between bg-white text-black first:mt-o border border-solid border-black border-r-4 border-b-4
-        "
+        <Link
+            href={link}
+            target="_blank"
+            onMouseMove={handleMouse}
+            onMouseLeave={handleMouseLeave}
         >
-            <Link href={link} target="_blank">
-                <h2 className="capitalize text-xl font-semibold hover:underline">
-                    {title}
-                </h2>
-            </Link>
-            <span>{date}</span>
-        </li>
+            <h2 className="capitalize text-xl font-semibold hover:underline">
+                {title}
+            </h2>
+            <FramerImage
+                style={{ x: x, y: y }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, transition: { duration: 0.2 } }}
+                ref={imgRef}
+                src={img}
+                alt={title}
+                width={400}
+                height={400}
+                className="z-10 w-96 h-auto hidden absolute rounded-lg"
+                priority
+                sizes="(max-width:768px) 100vw,
+                (max-width:1200px) 50vw, 33vw"
+            />
+        </Link>
     );
 };
 
@@ -47,44 +84,67 @@ const FeaturedArticles: React.FC<FeaturedArticleProps> = ({
     link
 }) => {
     return (
-        <li className="col-span-1 w-full p-4 bg-white border border-solid border-black rounded-2xl shadow-gray-400 shadow-lg">
+        <li className="col-span-4 md:col-span-1 w-full p-4 bg-white dark:bg-slate-900 border border-solid border-black dark:border-white rounded-2xl shadow-gray-400 dark:shadow-slate-600 shadow-lg">
             <Link
                 href={link}
                 target="_blank"
                 className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"
             >
                 <FramerImage
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.15 }}
                     transition={{ duration: 0.2 }}
                     src={img}
                     alt={title}
                     width={400}
                     height={400}
                     className="w-full h-auto"
+                    priority
+                    sizes="(max-width:768px) 100vw,
+                    (max-width:1200px) 50vw, 33vw"
                 />
             </Link>
             <Link href={link} target="_blank">
-                <h2 className="capitalize text-2xl font-bold dark:text-black my-2 hover:underline">
+                <h2 className="capitalize text-lg md:text-2xl font-bold text-black dark:text-white my-2 hover:underline">
                     {' '}
                     {title}
                 </h2>
             </Link>
-            <p className="text-sm mb-2 dark:text-black">{summary}</p>
+            <p className="text-sm mb-2 text-black dark:text-white">{summary}</p>
             <span className="text-pink-400 font-semibold">{time}</span>
         </li>
     );
 };
+
+const AllArticles: React.FC<AllArticleProps> = ({ img, title, date, link }) => {
+    return (
+        <motion.li
+            initial={{ y: 200 }}
+            whileInView={{
+                y: 0,
+                transition: { duration: 0.5, ease: 'easeInOut' }
+            }}
+            viewport={{ once: true }}
+            className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center
+        justify-between bg-white dark:bg-slate-900 text-lg md:text-xl  text-black dark:text-white first:mt-0 border border-solid border-black dark:border-white border-r-4 border-b-4
+        "
+        >
+            <MovingImg title={title} img={img} link={link} />
+            <span className="text-pink-400 font-semibold pl-4">{date}</span>
+        </motion.li>
+    );
+};
+
 const Articles = () => {
     return (
         <>
-            <main className="mb-16 max-w-7xl mx-auto h-screen flex flex-col items-center justify-center mt-32 p-24">
+            <main className="mb-64 max-w-7xl mx-auto min-h-screen flex flex-col items-center justify-center mt-96 md:mt-32 p-1 md:p-24">
                 <div className="pt-16">
-                    <h2 className="font-bold text-4xl w-full text-center my-16 ">
+                    <h2 className="font-bold text-2xl md:text-4xl w-full text-center my-16 ">
                         FEATURED ARTICLES
                     </h2>
-                    <ul className="grid grid-cols-2 gap-16">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-16">
                         <FeaturedArticles
-                            title="Communication Breakdown: Navigating Challenges in Marriage"
+                            title="Communication Breakdown: Navigating Challenges The Path to Success: Navigating Life's Challenges in Marriage"
                             summary="This article delves into the crucial role of communication in marital relationships, 
                             highlighting common pitfalls that can lead to breakdowns. From exploring the impact of misunderstandings 
                             to offering practical tips on fostering open dialogue, the piece provides insights for couples to navigate
@@ -95,7 +155,7 @@ const Articles = () => {
                             img={'/animations/2.jpg'}
                         />
                         <FeaturedArticles
-                            title="Navigating Financial Challenges in Marriage: A Guide to Financial Harmony"
+                            title="Navigating Financial Challenges The Path to Success: Navigating Life's Challenges in Marriage: A Guide to Financial Harmony"
                             summary="Addressing the often sensitive topic of finances in marriage, this article serves as a guide to help 
                             couples manage financial challenges and cultivate harmony. It emphasizes the importance of joint financial planning,
                             setting shared goals, and maintaining open communication about money matters. With practical advice on budgeting and 
@@ -107,77 +167,81 @@ const Articles = () => {
                             img={'/animations/6.jpg'}
                         />
                     </ul>
-                    <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
+                </div>
+            </main>
+            <main className="mb-16  mx-auto min-h-screen flex flex-col items-center justify-center mt-8 md:mt-8">
+                <div className="pt-16">
+                    <h2 className="font-bold text-2xl  md:text-4xl w-full text-center my-16 mt-32">
                         ALL ARTICLES
                     </h2>
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}
                     />
                     <AllArticles
-                        title="The Path to Success: Navigating Life's Challenges"
+                        title="The Path to Success: Navigating Life's Challenges The Path to Success: Navigating Life's Challenges"
                         date="December 16, 2023"
                         link="/"
                         img={'/animations/6.jpg'}

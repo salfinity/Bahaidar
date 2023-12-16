@@ -6,7 +6,7 @@ import { FaInstagramSquare, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const ArticleHeader = () => {
     return (
-        <header className="z-50 w-full fixed top-6 p-4 px-10 flex items-center justify-between">
+        <header className="z-50 hidden  w-full fixed top-6 p-4 px-10 md:flex items-center justify-between">
             <Logo />
             <nav
                 className="w-max py-3 px-8 border border-solid border-black rounded-full font-medium text-capitalize flex items-center gap-4
