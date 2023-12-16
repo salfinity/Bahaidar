@@ -6,7 +6,7 @@ import { FaInstagramSquare, FaTiktok, FaYoutube } from 'react-icons/fa';
 
 const ArticleHeader = () => {
     return (
-        <header className="w-full fixed top-6 p-4 px-10 flex items-center justify-between ">
+        <header className="z-50 w-full fixed top-6 p-4 px-10 flex items-center justify-between">
             <Logo />
             <nav
                 className="w-max py-3 px-8 border border-solid border-black rounded-full font-medium text-capitalize flex items-center gap-4
@@ -22,7 +22,7 @@ const ArticleHeader = () => {
                     Categories
                 </Link>
             </nav>
-            <nav className="flex items-center gap-4 cursor-pointer">
+            <nav className="flex items-center gap-4 cursor-pointer ml-auto">
                 <Link href="https://twitter.com/dr_m_bahaidar/" target="_blank">
                     <img src={TwitterXImg.src} className="w-8 h-8" />
                 </Link>

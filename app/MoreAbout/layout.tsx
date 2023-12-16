@@ -3,7 +3,6 @@ import ThemeSwitch from '@/components/theme-switch';
 import ThemeContextProvider from '@/context/theme-context';
 import DropdownMenu from '@/components/dropdown-menu';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import ArticleButton from '@/components/ArticleButton';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,7 +13,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="!scroll-smooth">
-            <body className=" bg-slate-50 dark:bg-slate-950 text-slate-950 dark:text-slate-100  ">
+            <body className=" bg-[url('/animations/4.jpg')] bg-cover bg-center  h-screen text-slate-950 dark:text-slate-100  ">
                 <GoogleAnalytics />
 
                 <ThemeContextProvider>

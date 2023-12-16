@@ -1,15 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
-import { FaQuoteRight } from 'react-icons/fa';
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import Layout from '@/components/Layout';
+import QuotesHeader from '../QuotesHeader';
 
-const BioPage = () => {
+function page() {
     return (
         <div className="flex items-center text-black dark:text-white w-full min-h-screen mt-0">
-            <div className="pt-0">
+            <Layout className="pt-0 w-full h-full inline-block z-0 mt-0">
+                <QuotesHeader />
                 <div className="flex items-center justify-between w-full">
                     <div className="w-1/2 p-16">
                         <Image
-                            src={'/bio.jpeg'}
+                            src={'/avatar.png'}
                             alt="Bahaidar"
                             className="w-full h-auto"
                             width={450}
@@ -18,9 +21,10 @@ const BioPage = () => {
                     </div>
                     <div className="w-1/2 p-16">
                         <h1 className="text-6xl font-bold text-left justify-center py-4">
-                            DR.MOHAMED BAHAIDAR
+                            QUOTE OF THE DAY
                         </h1>
                         <p className=" text-base font-medium py-4">
+                            <FaQuoteLeft />
                             The best lessons are learned with a hungry stomach,
                             an empty wallet, and a broken heart; at this point,
                             you will understand the genuineness of your true
@@ -30,9 +34,9 @@ const BioPage = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </Layout>
         </div>
     );
-};
+}
 
-export default BioPage;
+export default page;
