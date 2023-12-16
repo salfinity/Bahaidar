@@ -2,7 +2,6 @@ import { Inter } from 'next/font/google';
 import ThemeSwitch from '@/components/theme-switch';
 import ThemeContextProvider from '@/context/theme-context';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import DropArticle from './DropArticle';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,7 +18,6 @@ export default function RootLayout({
                 <ThemeContextProvider>
                     {children}
                     <ThemeSwitch />
-                    <DropArticle />
                 </ThemeContextProvider>
             </body>
         </html>
