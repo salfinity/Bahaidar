@@ -1,3 +1,5 @@
+'use client';
+
 import TransitionEffect from '../TransitionEffect';
 import Main from './Main';
 
